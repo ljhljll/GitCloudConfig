@@ -2,9 +2,12 @@ logging:
   pattern:
     console: "%d{HH:mm:ss.SSS} %clr(%5p) %clr(-){faint} %clr(%-80.80logger{79}){cyan} %clr(:) %m%n"
 
+---
 spring:
   application:
     name: eurekaServer
+  profiles:
+    active: dev
 
 server:
   port: 3000
@@ -22,3 +25,12 @@ eureka:
     serviceUrl: #微服务要注册到的地址.
       #http://localhost:3000/eureka
       defaultZone: http://eureka1:3001/eureka,http://eureka2:3002/eureka
+      
+---
+spring:
+    application:
+        name: eurekaServer
+    profiles:
+        active: stg
+server:
+  port: 3000
