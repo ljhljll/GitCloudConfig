@@ -1,0 +1,26 @@
+spring:
+    profiles:
+        active: dev
+        
+
+
+---
+#开发环境
+spring:
+    profiles:
+        active: dev
+        
+server:
+    port: 1000
+    
+    
+    
+    
+    
+---
+spring:
+    profiles:
+        active: stg
+
+server:
+    port: 1001
