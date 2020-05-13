@@ -1,20 +1,26 @@
-logging:
-  pattern:
-    console: "%d{HH:mm:ss.SSS} %clr(%5p) %clr(-){faint} %clr(%-80.80logger{79}){cyan} %clr(:) %m%n"
+spring:
+    profiles:
+        active: dev
+        
+
 
 ---
+#开发环境
 spring:
-  application:
-    name: eurekaServer
-  profiles:
-    active: dev
+    profiles:
+        active: dev
+        
 server:
-  port: 3000
+    port: 1000
+    
+    
+    
+    
+    
 ---
 spring:
-    application:
-        name: eurekaServer
     profiles:
         active: stg
+
 server:
-  port: 3001
+    port: 1001
